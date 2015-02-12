@@ -4,7 +4,7 @@ class CreatePrices < ActiveRecord::Migration
       t.integer :trefis_analyst_price
       t.integer :market_price
       t.integer :stock_id
-
+      t.date    :date
       t.timestamps
     end
   end
