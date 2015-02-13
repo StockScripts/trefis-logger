@@ -53,5 +53,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'lazy_high_charts'
+
 ruby "2.2.0"
 
