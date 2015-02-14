@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'stocks/index'
 
-  get 'stocks/show'
+  get 'stocks/show/:id' => 'stocks#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
