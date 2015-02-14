@@ -3,6 +3,6 @@
 <h1>Stocks#index</h1>
 <p>Find me in app/views/stocks/index.html.erb</p>
 <% @stocks.each do |stock| %>
-  <%= link_to stock.company, "/stocks/show/#{stock.id}" %>
+  <%= link_to stock.company, stock_path(stock.id)  %>
 <% end %>
 

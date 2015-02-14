@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  get 'stocks/index'
+  #get 'stocks/index' => 'stocks#index'
 
-  get 'stocks/show/:id' => 'stocks#show'
+  #get 'stocks/show/:id' => 'stocks#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'stocks#index'
+  #root 'stocks#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :stocks, :only => ['index','show']
 
   # Example resource route with options:
   #   resources :products do
