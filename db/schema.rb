@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20150212203014) do
 
   create_table "prices", force: true do |t|
-    t.integer  "trefis_analyst_price"
-    t.integer  "market_price"
+    t.float    "trefis_analyst_price"
+    t.float    "market_price"
     t.integer  "stock_id"
     t.date     "date"
     t.datetime "created_at"

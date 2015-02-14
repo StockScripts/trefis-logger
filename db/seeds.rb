@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'pry'
+
+n=20
+n.times do 
+  stock = Stock.first
+  last_price = stock.prices.order(:date).reverse.first
+  future_price = last_price.market_price + rand(10)/10.0
+  future_date  = last_price.date + 1.day      
+  stock.prices <<  Price.find_or_create_by(trefis_analyst_price: last_price.trefis_analyst_price, market_price: future_price,date: future_date)
+  #binding.pry
+end
