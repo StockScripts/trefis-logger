@@ -52,7 +52,13 @@ $(function () {
         seriesOptions[0] = {
           name: '<%= @stock.company %>',
           data: <%= @data %>
-      };
+        };
+        
+        seriesOptions[1] = {
+          name: 'trefis_analyts',
+          data: <%= @trefis_data %>
+        };
+        
         createChart();
         
 });
