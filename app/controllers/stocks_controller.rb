@@ -5,7 +5,7 @@ class StocksController < ApplicationController
 
   def show
     @stock       = Stock.find(params[:id])
-    @data        = @stock.prices.map{|price| [price.date.to_time.to_i * 1000, price.market_price] }.to_json
-    @trefis_data = @stock.prices.map{|price| [price.date.to_time.to_i * 1000, price.trefis_analyst_price]}.to_json
+    @data        = @stock.prices.order("date").map{|price| [price.date.to_time.to_i * 1000, price.market_price] }.to_json
+    @trefis_data = @stock.prices.order("date").map{|price| [price.date.to_time.to_i * 1000, price.trefis_analyst_price]}.to_json
   end
 end
