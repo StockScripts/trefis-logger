@@ -41,5 +41,6 @@ group :development do
 end
 
 gem 'lazy_high_charts'
+gem 'bootstrap-sass', '~> 3.3.0'
 ruby "2.2.0"
 
