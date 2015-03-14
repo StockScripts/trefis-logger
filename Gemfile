@@ -40,7 +40,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'lazy_high_charts'
-gem 'bootstrap-sass', '~> 3.3.0'
+
 ruby "2.2.0"
 
