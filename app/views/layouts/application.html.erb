@@ -9,9 +9,24 @@
   <script src="//code.highcharts.com/stock/modules/exporting.js"></script>
 </head>
 <body>
-<div class="container">
-  <%= yield %>
-</div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Trefis-Logger</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Top 10</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> 
+
+  <div class="container">
+       <%= yield %>
+  </div>
 
 </body>
 </html>
