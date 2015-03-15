@@ -1,0 +1,19 @@
+
+<table class="table table-condensed">
+ <thead>
+      <tr>
+        <th>Company</th>
+        <th>Last Market Value</th>
+        <th>Trefis Valuation</th>
+      </tr>
+   </thead>
+   <tbody>
+   <% stocks.each do |stock| %>
+   <tr>
+        <td><%= link_to stock.company, stock_path(stock.id)  %></td>
+        <td><%= stock.prices.last.try(:market_price)%> </td>
+        <td><%= stock.prices.last.try(:trefis_analyst_price)  %></td>
+   </tr> 
+   <% end %>
+  </tbody>    
+</table>

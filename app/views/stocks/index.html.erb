@@ -4,7 +4,4 @@
   will be able to determine how accurate are the trefis valuation team...</p>
 </div>
 
-<% @stocks.each do |stock| %>
-  <%= link_to stock.company, stock_path(stock.id)  %>
-<% end %>
-
+<%= render partial: 'stock_list',locals: { stocks:  @stocks} %>
